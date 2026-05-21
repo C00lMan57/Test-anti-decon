@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Proxy</title>
+</head>
+<body>
+    <input type="text" id="url" placeholder="Entrez l'URL à visiter" />
+    <button onclick="loadUrl()">Go</button>
+    <iframe id="proxyFrame" style="width: 100%; height: 500px; border: none;"></iframe>
+    <script>
+        function loadUrl() {
+            const url = document.getElementById("url").value;
+            // Utilise un service de proxy externe (ex: https://cors-anywhere.herokuapp.com/)
+            const proxyUrl = `https://cors-anywhere.herokuapp.com/${url}`;
+            document.getElementById("proxyFrame").src = proxyUrl;
+        }
+    </script>
+</body>
+</html>

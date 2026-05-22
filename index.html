@@ -86,7 +86,7 @@
 
             try {
                 // Utilise api.allorigins.win (proxy CORS public)
-                const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+                const proxyUrl = `https://thingproxy.freeboard.io/fetch/${encodeURIComponent(url)}`;
 
                 const response = await fetch(proxyUrl, {
                     method: 'GET',
